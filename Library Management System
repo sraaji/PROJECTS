@@ -1,0 +1,387 @@
+import java.awt.*;
+
+import javax.swing.*;
+
+import java.awt.event.*;
+
+import java.util.*;
+
+import java.io.*;
+
+class lib extends JFrame
+
+{static JFrame f;
+
+ public static void main(String[] args) {
+
+ f=new  JFrame("MAIN");
+
+  JPanel p=new JPanel();
+
+JLabel use=new JLabel("username");
+
+ use.setBounds(10,10,100,30);
+
+JLabel pass=new JLabel("password");
+
+ pass.setBounds(10,50,100,30);
+
+JTextField uset=new JTextField();
+
+ uset.setBounds(180,10,100,30);
+
+JTextField passt=new JTextField();
+
+ passt.setBounds(180,50,100,30);
+
+ JButton jj=new JButton("SUBMIT");
+
+      jj.setBounds(85,150,100,30);
+
+      JLabel n=new JLabel("NAME");
+
+      n.setBounds(10,10,100,30);
+
+      JLabel i=new JLabel("ID");
+
+      i.setBounds(10,50,100,30);
+
+      JLabel b=new JLabel("BRANCH");
+
+      b.setBounds(10,100,100,30);
+     
+ JLabel y=new JLabel("YEAR");
+
+      y.setBounds(10,150,100,30);
+
+      JLabel nb=new JLabel("NAME OF BOOK");
+
+      nb.setBounds(10,200,100,30);
+
+      JTextField nt=new JTextField();
+
+      nt.setBounds(180,10,100,30);
+
+      JTextField it=new JTextField();
+
+      it.setBounds(180,50,100,30);
+
+      JTextField bt=new JTextField();
+
+      bt.setBounds(180,100,100,30);
+
+      JTextField yt=new JTextField();
+
+      yt.setBounds(180,150,100,30);
+
+      JTextField nbt=new JTextField();
+
+      nbt.setBounds(180,200,100,30);
+
+      JButton sl=new JButton("SUBMIT");
+
+      sl.setBounds(85,250,100,30);
+
+      JLabel bi=new JLabel("BOOK ID");
+
+      bi.setBounds(10,10,100,30);
+
+      JLabel bn=new JLabel("BOOK NAME");
+
+      bn.setBounds(10,50,100,30);  
+
+      JLabel an=new JLabel("AUTHOR NAME");
+
+      an.setBounds(10,100,100,30);
+
+      JLabel pr=new JLabel("PRICE");
+
+      pr.setBounds(10,150,100,30);
+
+      JTextField bit=new JTextField();
+
+      bit.setBounds(180,10,100,30);
+
+      JTextField bnt=new JTextField();
+     
+ bnt.setBounds(180,50,100,30);
+
+      JTextField ant=new JTextField();
+
+      ant.setBounds(180,100,100,30);
+
+      JTextField pt=new JTextField();
+
+      pt.setBounds(180,150,100,30);
+
+      JButton sa=new JButton("SUBMIT");
+
+      sa.setBounds(85,200,100,30);
+
+      JLabel ebn=new JLabel("ENTER BOOK NAME");
+
+      ebn.setBounds(10,10,150,30);
+
+      JLabel ebi=new JLabel("ENTER BOOK ID");
+
+      ebi.setBounds(10,50,150,30);
+
+      JLabel ean=new JLabel("ENTER AUTHOR NAME");
+
+      ean.setBounds(10,100,150,30);
+
+      JTextField ebnt=new JTextField();
+
+      ebnt.setBounds(200,10,100,30);
+
+      JTextField ebit=new JTextField();
+
+      ebit.setBounds(200,50,100,30);
+
+      JTextField eant=new JTextField();
+
+      eant.setBounds(200,100,100,30);
+
+      JButton sd=new JButton("SUBMIT");
+      sd.setBounds(85,150,100,30);
+  
+JButton q=new JButton("details are stored successfully");
+
+      q.setBounds(85,150,300,50);
+
+ JButton w=new JButton("book is added successfully");
+
+      w.setBounds(85,150,300,50);
+
+ JButton x=new JButton("book details are stored successfully");
+
+      x.setBounds(85,150,300,50);
+  
+JLabel l=new JLabel("LEND");
+
+  l.setBounds(10,10,100,30);
+
+  JLabel a=new JLabel("BOOKS TO ADD");
+
+  a.setBounds(10,50,100,30);
+
+  JLabel d=new JLabel("BOOKS DETAILS");
+
+  d.setBounds(10,90,100,30);
+
+  JButton lb=new JButton("LEND");
+
+  lb.setBounds(110,10,100,30);
+
+  JButton ab=new JButton("ADD");
+
+  ab.setBounds(110,50,100,30);
+
+  JButton db=new JButton("DETAILS");
+
+  db.setBounds(110,90,100,30);
+
+JButton ownb=new JButton("OWNER LOGIN");
+
+  ownb.setBounds(110,90,200,50);
+
+p.add(ownb);
+
+p.add(use);
+
+p.add(uset);
+
+p.add(pass);
+p.add(passt);
+
+ f.add(p);
+ 
+ f.setSize(300,300);
+
+  p.setLayout(null);
+
+  f.setVisible(true);
+
+ownb.addActionListener(new ActionListener(){
+
+public void actionPerformed(ActionEvent e){
+
+f=new JFrame("owner account");
+
+JPanel p=new JPanel();
+
+p.add(l);
+
+  p.add(a);
+
+  p.add(d);
+
+  p.add(lb);
+
+  p.add(ab);
+
+  p.add(db);
+
+  f.add(p);
+
+  f.setSize(300,300);
+
+  p.setLayout(null);
+
+  f.setVisible(true);}});
+
+   lb.addActionListener(new ActionListener(){  
+
+        public void actionPerformed(ActionEvent e){
+
+      f=new  JFrame("LEND");
+
+    JPanel p=new JPanel();
+
+    p.add(n);
+
+        p.add(i);
+        p.add(sl);
+       
+       p.add(b);
+
+        p.add(y);
+
+        p.add(nb);
+
+        p.add(nt);
+
+        p.add(it);
+
+       p.add(bt);
+
+       p.add(yt);
+
+        p.add(nbt);
+
+        f.add(p);
+
+        f.setSize(300,400);
+      
+  p.setLayout(null);
+
+        f.setVisible(true);}});
+
+ ab.addActionListener(new ActionListener(){  
+
+        public void actionPerformed(ActionEvent e){
+
+     f=new  JFrame("ADD BOOKS");
+
+     JPanel p=new JPanel();
+
+  p.add(bi);
+
+     p.add(bn);
+
+     p.add(an);
+
+     p.add(pr);
+
+     p.add(bit);
+
+     p.add(bnt);
+
+     p.add(ant);
+
+     p.add(pt);
+
+     p.add(sa);
+
+     f.add(p);
+
+     f.setSize(300,400);
+
+     p.setLayout(null);
+
+     f.setVisible(true);}});
+
+ db.addActionListener(new ActionListener(){  
+
+        public void actionPerformed(ActionEvent e) {
+
+      f=new  JFrame("BOOKS DETAILS");
+
+      JPanel p=new JPanel();
+
+ p.add(ebn);
+
+      p.add(ebi);
+
+      p.add(ean);
+
+      p.add(ebnt);
+
+      p.add(ebit);
+
+      p.add(eant);
+
+p.add(sd);
+
+      f.add(p);
+
+      f.setSize(400,300);
+
+      p.setLayout(null);
+
+      f.setVisible(true); }});
+
+    sl.addActionListener(new ActionListener(){  
+
+        public void actionPerformed(ActionEvent e){
+
+        f=new  JFrame("le");
+
+        JPanel p=new JPanel();
+
+p.add(q);
+
+ f.add(p);
+
+ f.setSize(400,300);
+
+      p.setLayout(null);
+
+      f.setVisible(true); }});
+
+     sa.addActionListener(new ActionListener(){  
+
+        public void actionPerformed(ActionEvent e){
+
+  f=new  JFrame("add");
+
+        JPanel p=new JPanel();
+
+p.add(w);
+
+ f.add(p);
+
+ f.setSize(400,300);
+
+      p.setLayout(null);
+
+      f.setVisible(true); }});
+
+     sd.addActionListener(new ActionListener()){  
+
+        public void actionPerformed(ActionEvent e){
+
+  f=new  JFrame("de");
+
+        JPanel p=new JPanel();
+
+p.add(x);
+
+ f.add(p);
+
+f.setSize(400,300);
+
+      p.setLayout(null);
+
+      f.setVisible(true);}});
+ }}
