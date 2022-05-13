@@ -1,0 +1,65 @@
+clc;
+close all;
+clear all;
+f=1:20:100; 
+k=2; %sperical spreading 
+d= 1000:1000:60000;
+d1= 1:1:10;
+for f=20:20:100;
+ FSPL=32.44+20*log10(d1)+20*log10(f); 
+ figure(1);
+ d1= 1:1:10;
+ plot(d1,FSPL)
+ hold all;
+ grid on;
+ legend('f=20kHz','f=40kHz','f=60kHz','f=80kHz','f=100kHz')
+ title('Free space path loss variation with distance for diff 
+frequencies');
+ ylabel('Path Loss (db)');
+ xlabel('Distance in (Km)');
+ af1=(0.11*f*f)/(1+(f*f));
+ af2=(44*f*f)/(4100+(f*f));
+ af3=2.75*(10^(-4))*f*f;
+ af4=af1+af2+af3+0.003;
+ APL=10*k*log(d1)+d1*af4;
+ figure(2);
+ d1= 1:1:10;
+ plot(d1,APL)
+ hold all;
+ grid on;
+ legend('f=20kHz','f=40kHz','f=60kHz','f=80kHz','f=100kHz')
+ title('Underwater path loss variation with distance for diff 
+frequencies(for k = 2)');
+ ylabel('Path Loss (db)');
+ xlabel('Distance in (Km)');
+ af1=(0.11*f*f)/(1+(f*f));
+ af2=(44*f*f)/(4100+(f*f));
+ af3=2.75*(10^(-4))*f*f;
+ af4=af1+af2+af3+0.003;
+ APL=10*1*log(d1)+d1*af4;
+ figure(3);
+ d1= 1:1:10;
+ plot(d1,APL)
+ hold all;
+ grid on;
+ legend('f=20kHz','f=40kHz','f=60kHz','f=80kHz','f=100kHz')
+ title('Underwater path loss variation with distance for diff 
+frequencies(for k = 1)');
+ ylabel('Path Loss (db)');
+ xlabel('Distance in (Km)');
+ af1=(0.11*f*f)/(1+(f*f));
+ af2=(44*f*f)/(4100+(f*f));
+ af3=2.75*(10^(-4))*f*f;
+ af4=af1+af2+af3+0.003;
+ APL=10*(1.5)*log(d1)+d1*af4;
+ figure(4);
+ d1= 1:1:10;
+ plot(d1,APL)
+ hold all;
+ grid on;
+ legend('f=20kHz','f=40kHz','f=60kHz','f=80kHz','f=100kHz')
+ title('Underwater path loss variation with distance for diff 
+frequencies(for k = 1.5)');
+ ylabel('Path Loss (db)');
+ xlabel('Distance in (Km)');
+end
